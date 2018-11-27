@@ -5,46 +5,54 @@
 #include <QPlainTextEdit>
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+	QMainWindow(parent),
+	ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
-    ui->buttonBox->setEnabled(false);
+	ui->setupUi(this);
+	ui->pushButton_3->setEnabled(false);
+	ui->pushButton_4->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+	delete ui;
 }
 
 void MainWindow::on_pushButton_released()
 {
-    ui->buttonBox->setEnabled(true);
-    process = new QProcess();
-    process->start("pkexec /usr/local/bin/gswitch egpu");
-    process->waitForReadyRead();
-    ui->plainTextEdit->appendPlainText(process->readAllStandardOutput());
+	ui->pushButton_3->setEnabled(true);
+	ui->pushButton_4->setEnabled(true);
+	process = new QProcess();
+	process->start("pkexec /usr/local/bin/gswitch egpu");
+	process->waitForReadyRead();
+	ui->plainTextEdit->appendPlainText(process->readAllStandardOutput());
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_2_released()
 {
-    ui->buttonBox->setEnabled(true);
-    process = new QProcess();
-    process->start("pkexec /usr/local/bin/gswitch internal");
-    process->waitForReadyRead();
-    ui->plainTextEdit->appendPlainText(process->readAllStandardOutput());
+	ui->pushButton_3->setEnabled(true);
+	ui->pushButton_4->setEnabled(true);
+	process = new QProcess();
+	process->start("pkexec /usr/local/bin/gswitch internal");
+	process->waitForReadyRead();
+	ui->plainTextEdit->appendPlainText(process->readAllStandardOutput());
 }
 
-void MainWindow::on_buttonBox_accepted()
+void MainWindow::on_pushButton_3_released()
 {
-    process->write("y\n");
-    process->waitForFinished();
-    ui->plainTextEdit->appendPlainText(process->readAllStandardOutput());
+	process->write("y\n");
+	process->waitForFinished();
+	ui->plainTextEdit->appendPlainText(process->readAllStandardOutput());
 }
 
-void MainWindow::on_buttonBox_rejected()
+void MainWindow::on_pushButton_4_released()
 {
-    process->write("n\n");
-    process->waitForFinished();
-    ui->plainTextEdit->appendPlainText(process->readAllStandardOutput());
+	process->write("n\n");
+	process->waitForFinished();
+	ui->plainTextEdit->appendPlainText(process->readAllStandardOutput());
+}
+
+void MainWindow::on_pushButton_5_released()
+{
+	QApplication::quit();
 }

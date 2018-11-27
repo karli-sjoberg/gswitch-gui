@@ -5,29 +5,27 @@
 #include <QProcess>
 
 namespace Ui {
-class MainWindow;
+	class MainWindow;
 }
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+	explicit MainWindow(QWidget *parent = 0);
+	~MainWindow();
 
 private slots:
-    void on_pushButton_released();
-
-    void on_pushButton_2_clicked();
-
-    void on_buttonBox_accepted();
-
-    void on_buttonBox_rejected();
+	void on_pushButton_released();
+	void on_pushButton_2_released();
+	void on_pushButton_3_released();
+	void on_pushButton_4_released();
+	void on_pushButton_5_released();
 
 private:
-    Ui::MainWindow *ui;
-    QProcess *process;
+	Ui::MainWindow *ui;
+	QProcess *process;
 };
 
 #endif // MAINWINDOW_H
