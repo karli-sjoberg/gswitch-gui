@@ -6,38 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>675</width>
     <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Gswitch-GUI</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
     <normaloff>:/icon.ico</normaloff>:/icon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="egpuButton">
     <property name="geometry">
      <rect>
-      <x>7</x>
+      <x>231</x>
       <y>10</y>
-      <width>191</width>
-      <height>34</height>
+      <width>211</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string>egpu</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="internalButton">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>452</x>
       <y>10</y>
-      <width>191</width>
-      <height>34</height>
+      <width>211</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -49,58 +49,94 @@
      <rect>
       <x>10</x>
       <y>50</y>
-      <width>381</width>
-      <height>201</height>
+      <width>655</width>
+      <height>200</height>
      </rect>
     </property>
     <property name="readOnly">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="yesButton">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>260</y>
       <width>88</width>
-      <height>34</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string>Yes</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="noButton">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>108</x>
       <y>260</y>
       <width>88</width>
-      <height>34</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string>No</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="quitButton">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>577</x>
       <y>260</y>
       <width>88</width>
-      <height>34</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string>Quit</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="setupButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>211</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>setup</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>206</x>
+      <y>260</y>
+      <width>263</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="submitButton">
+    <property name="geometry">
+     <rect>
+      <x>479</x>
+      <y>260</y>
+      <width>88</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Submit</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>pushButton</tabstop>
+  <tabstop>egpuButton</tabstop>
  </tabstops>
  <resources>
   <include location="resources.qrc"/>

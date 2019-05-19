@@ -17,11 +17,13 @@ public:
 	~MainWindow();
 
 private slots:
-	void on_pushButton_released();
-	void on_pushButton_2_released();
-	void on_pushButton_3_released();
-	void on_pushButton_4_released();
-	void on_pushButton_5_released();
+    void on_egpuButton_released();
+    void on_internalButton_released();
+    void on_yesButton_released();
+    void on_noButton_released();
+    void on_quitButton_released();
+    void on_setupButton_released();
+    void on_submitButton_released();
 
 private:
 	Ui::MainWindow *ui;
